@@ -36,7 +36,7 @@ setTimeout(() => {
 
         div.appendChild(p);
     })
-}, 100)
+}, 200)
 
 
 let search = (x) => {   
