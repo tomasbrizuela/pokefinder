@@ -8,4 +8,9 @@ p:hover {
   transition: 0.3s ease;
 }
 
+input {
+  outline: none;
+  border: 0px;
+}
+
 /*# sourceMappingURL=style.css.map */
