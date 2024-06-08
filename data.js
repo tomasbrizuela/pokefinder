@@ -58,12 +58,16 @@ let search = (x) => {
             p.textContent = item.name;
             p.className = "m-1 shadow text-center"
             div2.appendChild(p);
-            input.value = "";
         })
+        input.value = "";
+        input.focus();
     } else {
         let p = document.createElement('p');
         p.textContent = "No pokemos name contains: " + `"${x}"` 
         div2.appendChild(p);
+        input.value = "";
+        input.focus()
+
     }
 }
 
