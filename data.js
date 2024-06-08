@@ -47,18 +47,24 @@ let search = (x) => {
         item.remove()
     })
 
-    ans.forEach(item => {
+    if (ans.length > 0){
+        ans.forEach(item => {
+            let p = document.createElement('p');
+            p.style.border = "0px solid black";
+            p.style.borderRadius = "5px";
+            p.style.padding = "5px";
+            p.style.width = "200px";
+            p.style.backgroundColor = "white";
+            p.textContent = item.name;
+            p.className = "m-1 shadow text-center"
+            div2.appendChild(p);
+            input.value = "";
+        })
+    } else {
         let p = document.createElement('p');
-        p.style.border = "0px solid black";
-        p.style.borderRadius = "5px";
-        p.style.padding = "5px";
-        p.style.width = "200px";
-        p.style.backgroundColor = "white";
-        p.textContent = item.name;
-        p.className = "m-1 shadow text-center"
+        p.textContent = "No pokemos name contains: " + `"${x}"` 
         div2.appendChild(p);
-        input.value = "";
-    })
+    }
 }
 
 let add = document.querySelector('button');
