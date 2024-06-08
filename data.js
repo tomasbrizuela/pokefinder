@@ -26,6 +26,9 @@ pok();
 setTimeout(() => {
     pokeList.forEach(item => {
         let p = document.createElement('p');
+        let a = document.createElement('a');
+            a.href = `https://www.wikidex.net/wiki/${item.name}`;
+            a.target = "_blank";
         p.style.border = "0px solid black";
         p.style.borderRadius = "5px";
         p.style.padding = "5px";
@@ -34,9 +37,10 @@ setTimeout(() => {
         p.textContent = item.name;
         p.className = "m-1 shadow text-center"
 
-        div.appendChild(p);
+        div.appendChild(a);
+        a.appendChild(p);
     })
-}, 200)
+}, 500)
 
 
 let search = (x) => {   
@@ -50,6 +54,9 @@ let search = (x) => {
     if (ans.length > 0){
         ans.forEach(item => {
             let p = document.createElement('p');
+            let a = document.createElement('a');
+            a.href = `https://www.wikidex.net/wiki/${item.name}`;
+            a.target = "_blank";
             p.style.border = "0px solid black";
             p.style.borderRadius = "5px";
             p.style.padding = "5px";
@@ -57,7 +64,8 @@ let search = (x) => {
             p.style.backgroundColor = "white";
             p.textContent = item.name;
             p.className = "m-1 shadow text-center"
-            div2.appendChild(p);
+            div2.appendChild(a);
+            a.appendChild(p);
         })
         input.value = "";
         input.focus();
